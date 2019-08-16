@@ -1,4 +1,4 @@
-FROM elixir:1.8-alpine
+FROM elixir:1.9-alpine
 
 LABEL maintainer="sam@umbrellium.co.uk"
 
@@ -50,7 +50,7 @@ RUN addgroup -g 2000 node \
   && rm -Rf "node-v$NODE_VERSION" \
   && rm "node-v$NODE_VERSION.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt
 
-ENV PHOENIX_VERSION 1.4.6
+ENV PHOENIX_VERSION 1.4.9
 
 RUN mix local.hex --force \
   && mix local.rebar --force \
